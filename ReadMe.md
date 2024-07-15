@@ -122,10 +122,11 @@ VPC_ID="vpc-9987677666"
 PREFIX_NAME="cloudfront_ip"
 REGIOG="ap-east-1"
 PORT="443"
+TZ="Asia/taipei"
 aws lambda update-function-configuration \
     --function-name  ${NAME} \
     --timeout 60 \
-    --environment "Variables={VPC_ID='"${VPC_ID}"',PORTS='"${PORT}"',PREFIX_NAME='"${PREFIX_NAME}"',REGION='"${REGIOG}"',DEBUG=true}"
+    --environment "Variables={VPC_ID='"${VPC_ID}"',PORTS='"${PORT}"',PREFIX_NAME='"${PREFIX_NAME}"',REGION='"${REGIOG}"',DEBUG=true,TZ='"${TZ}"'}"
 ```
 
 
